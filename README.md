@@ -183,4 +183,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## Author
 
-Created by [@CPOonline](https://t.me/CPOonline)
+Open source project. Contributions welcome.

@@ -6,7 +6,6 @@ metadata:
   openclaw:
     emoji: "📰"
     version: "1.0.0"
-    author: "@CPOonline"
     requires:
       tools: ["web_fetch", "message", "cron"]
     schedule: "0 7 * * *"

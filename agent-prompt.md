@@ -1,15 +1,15 @@
 # Agent Prompt
 
-This is the full prompt used by the cron job. Copy this when setting up the agent.
+Full prompt for the cron job. Copy and customize when setting up.
 
 ---
 
 Generate daily AI/Product digest.
 
-Read /data/.openclaw/workspace/ai-digest/sources.json (34 sources)
-Read /data/.openclaw/workspace/ai-digest/TEMPLATE.md
-Read /data/.openclaw/workspace/ai-digest/SCORING.md
-Read /data/.openclaw/workspace/ai-digest/seen-urls.json to skip duplicates
+Read config/sources.json (34 sources)
+Read docs/TEMPLATE.md
+Read docs/SCORING.md
+Read seen-urls.json to skip duplicates
 web_fetch each source, extract news from last 24-48h
 
 SCORING: I × R × C (1-5 each). MUST READ ≥50 | RELEVANT 20-49 | SKIP <20
@@ -37,8 +37,8 @@ If you skip this: Competitors leverage 3x better agentic performance
 ★★★★★ · 5 min
 
 
-2) GPT-5.3-Codex
-What: OpenAI's agentic coding model, 25% faster
+2) Next Item Title
+What: Summary here
 ...
 
 Max 3 MUST READ, 3-5 RELEVANT
@@ -48,6 +48,17 @@ Send via message tool to telegram, to TARGET_CHAT_ID. Split into 2 messages.
 
 ## Configuration
 
-Replace `TARGET_CHAT_ID` with your Telegram chat ID.
+Replace:
+- `TARGET_CHAT_ID` with your Telegram chat ID
+- File paths if installed in different location
 
-Adjust file paths if installed in different location.
+## Full Paths Example
+
+If installed at `~/.openclaw/workspace/skills/ai-digest/`:
+
+```
+Read ~/.openclaw/workspace/skills/ai-digest/config/sources.json
+Read ~/.openclaw/workspace/skills/ai-digest/docs/TEMPLATE.md
+Read ~/.openclaw/workspace/skills/ai-digest/docs/SCORING.md
+Read ~/.openclaw/workspace/skills/ai-digest/seen-urls.json
+```

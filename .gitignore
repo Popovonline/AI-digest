@@ -1,4 +1,4 @@
-# Deduplication state
+# State files (runtime)
 seen-urls.json
 
 # OS files
@@ -9,3 +9,8 @@ Thumbs.db
 *.swp
 *.swo
 *~
+.vscode/
+.idea/
+
+# Logs
+*.log
